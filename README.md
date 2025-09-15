@@ -96,5 +96,3 @@ canBeTypedWords("hello world code", "ad") → 1
 ```
 
 ---
-
-Do you want me to also show a **step-by-step dry run with arrays and variables table** (like line-by-line memory state), or just logical flow like above is enough?
