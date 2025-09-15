@@ -1,0 +1,23 @@
+class Solution {
+    public int check(String word,boolean[] broken)
+    {
+        for(char ch:word.toCharArray())
+        {
+            if(broken[ch-'a']) return 0;
+        }
+        return 1;
+    }
+    public int canBeTypedWords(String text, String brokenLetters) {
+        int ans=0;
+        boolean[] broken=new boolean[26];
+        for(char ch:brokenLetters.toCharArray())
+        {
+          broken[ch-'a']=true;
+        }
+        for(String word:text.split(" "))
+        {
+            ans+=check(word,broken);
+        }
+        return ans;
+    }
+}
